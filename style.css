@@ -233,28 +233,48 @@ nav a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    .drop input ~ ul{
-        display: none;
+    .drop input ~ ul {
+      display: none;
     }
-    .drop input:checked  ~ ul{
-        display: block;
+    .drop input:checked ~ ul {
+      display: block;
+      position: absolute;
+      width: 100%;
+      background-color: black;
+      border-bottom: 1px solid var(--yellow);
+  
+      transition: all 0.5s;
+      
+  
     }
-    
+  
     nav {
-        flex-direction: column;
+      display: grid;
+      position:sticky;
+      top: 0;
+      z-index: 100;
+      grid-template-columns: 1fr 9fr;
+     
     }
+  
+    }
+    .logo {
+      justify-self: center;
+      order: 2;
+    }
+  
     .menu {
-        display: none;
+      display: none;
     }
     .drop {
-        display: block;
-        background-color: black;
-        margin: 0;
+      display: block;
+      background-color: black;
+      margin: 0;
     }
     body {
-        font-size: 5px;
+      font-size: 5px;
     }
-}
+  
 @media only screen and (min-width: 1920px) {
     body{
         display: flex;
