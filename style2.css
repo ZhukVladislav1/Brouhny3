@@ -258,7 +258,7 @@ nav a:hover {
    
   }
 
-  }
+  
   .logo {
     justify-self: center;
     order: 2;
@@ -276,7 +276,7 @@ nav a:hover {
     font-size: 5px;
   }
 
-
+}
 
 @media only screen and (min-width: 1920px) {
   body {
