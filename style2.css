@@ -180,8 +180,8 @@ footer .contact input {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    width: 20px;
-    height: 20px;
+    width: 10vh;
+    height: 10vh;
     border-radius: 50%;
 }
 
@@ -194,4 +194,75 @@ footer .contact input {
 
 nav a:hover {
     text-shadow: 3px 3px 1px rgba(255, 255, 0, 0.616);
+}
+
+.drop {
+    display: none;
+    margin: 20px;
+    width: 100%;
+    background-color: var(--yellow);
+    border: 1px solid black;
+}
+.drop input{
+    display: none;
+}
+.drop ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drop ul {
+    padding: 0;
+}
+
+.drop label{
+    background: url('images/b-m_icon.jpg')  ;
+    background-size: cover;
+    width: 50px;
+    aspect-ratio: 1/1;
+}
+
+.drop ul a{
+    text-decoration: none;
+    text-shadow: none;
+    color: var(--yellow);
+    font-weight: 500;
+    font-size: 30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .drop input ~ ul{
+        display: none;
+    }
+    .drop input:checked  ~ ul{
+        display: block;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
+    .menu {
+        display: none;
+    }
+    .drop {
+        display: block;
+        background-color: black;
+        margin: 0;
+    }
+    body {
+        font-size: 5px;
+    }
+}
+@media only screen and (min-width: 1920px) {
+    body{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .main{
+        width: 1920px;
+    }
 }
